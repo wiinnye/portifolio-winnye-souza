@@ -25,13 +25,17 @@ export default function RootLayout({
 }>) {
   return ( 
     <html lang="pt" suppressHydrationWarning>
-      <Provider>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        {/*
+          Mova o Provider para DENTRO do <body>
+          Isso resolve o problema de renderização de scripts/elementos.
+        */}
+        <Provider>
+          {children}
+        </Provider>
       </body>
-      </Provider>
     </html>
   );
 }
