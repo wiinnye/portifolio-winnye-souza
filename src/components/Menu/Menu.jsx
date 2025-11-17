@@ -15,23 +15,23 @@ export default function Menu() {
       p="1rem"
     >
       <Link href='/' className={styles.menuLink}>
-        Portifólio
+        Início
       </Link>
-      <Flex w="25%" justifyContent="space-between">
+      <Flex w="auto" justifyContent="space-between">
         <Link href="/QuemSou" className={styles.menuLink}>
-          <Icon size="lg" color="#fff" mr="0.5rem">
+          <Icon size="lg" color="#ff7b00" mr="0.5rem">
             <BsPersonArmsUp />
           </Icon>
           Quem Sou
         </Link>
         <Link href="/Projetos" className={styles.menuLink} >
-          <Icon size="lg" color="#fff" mr="0.5rem">
+          <Icon size="lg" color="#ff7b00" mr="0.5rem">
             <PiProjectorScreenChartLight />
           </Icon>
           Projetos
         </Link>
          <Link href="/Contato" className={styles.menuLink} >
-          <Icon size="lg" color="#fff" mr="0.5rem">
+          <Icon size="lg" color="#ff7b00" mr="0.5rem">
             <CiPhone />
           </Icon>
           Contato

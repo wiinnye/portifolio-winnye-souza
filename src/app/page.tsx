@@ -1,29 +1,41 @@
-import { Flex, Grid, GridItem, Icon, Image, Text } from "@chakra-ui/react";
+import { Flex, Image, Text, Box } from "@chakra-ui/react";
 import Menu from "../components/Menu/Menu";
 
 export default function Home() {
   return (
-    <Grid w="100%" h="100vh" bg="#d5e5ec">
-      <GridItem width="100%" height="50%">
-        <Menu/>
-      </GridItem>
-      <GridItem>
-        <Flex w="100%" justifyContent="space-between">
+    <Flex w="100%" bg="#0B3142" flexDirection="column">
+      <Flex width="100%" height="20%">
+        <Menu />
+      </Flex>
+      <Flex
+        w="100%"
+        justifyContent="space-between"
+        flexDirection="column"
+        mt="1rem"
+      >
+        <Box mt={8} mb={4} mx="auto" maxW="800px">
           <Image
-            w="40%"
-            src="https://bowwe.com/upload/domain/37991/images/054_WebsiteBackground/Cover-2-Website-Background-com.webp?22168.29999998212"
+            src="/images/banner.png"
+            alt="Foto de perfil profissional"
+            width={800}
+            height={400}
+            objectFit="contain"
           />
-          <Flex w="50%" alignSelf="center" justify="center">
-            <Flex w='70%' flexDirection='column' alignItems="center">
-              <Text fontSize='30px' fontWeight='bold'>Desenvolvedora Frontend</Text>
-              <Text mt='1rem' alignSelf="center">
-                Programadora com conhecimento em JavaScript, React.js, HTML e
-                CSS, aprimorando os conhecimentos em Next.js e Typescript.
-              </Text>
-            </Flex>
-          </Flex>
+        </Box>
+
+        <Flex w="100%" flexDirection="column" alignItems="center" px=".8rem">
+          <Text fontSize="40px" fontWeight="bold" color="#fff">
+            Winnye Dandhara Souza
+          </Text>
+          <Text fontSize="25px" fontWeight="bold" color="#fff" mt="1rem">
+            Desenvolvedora Frontend
+          </Text>
+          <Text mt="1rem" alignSelf="center" color="#fff">
+            Programadora com conhecimento em JavaScript, React.js, HTML e CSS,
+            aprimorando os conhecimentos em Next.js e Typescript.
+          </Text>
         </Flex>
-      </GridItem>
-    </Grid>
+      </Flex>
+    </Flex>
   );
 }

@@ -1,11 +1,11 @@
 .menuLink {
-  color: #fff;
-  font-size: 20px;
+  color: #ff7b00;
+  font-size: 30px;
   text-decoration: none;
   padding: 10px;
   font-family: 'Times New Roman', Times, serif;
 }
 
 .menuLink:hover {
-  color: rgb(0, 134, 139);
+  color: #e48329;
 }

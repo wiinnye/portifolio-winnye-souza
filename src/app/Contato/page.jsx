@@ -1,57 +1,52 @@
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex, Heading, Text, VStack } from "@chakra-ui/react";
+import ContatoLink from "../../components/Contato/page"; 
 import Menu from "../../components/Menu/Menu";
-import Link from "next/link";
-import styles from "./Contato.module.css";
+import { FaGithub, FaLinkedinIn, FaEnvelope } from "react-icons/fa";
 
 export default function Contato() {
   return (
-    <Flex h="100vh" flexDirection="column" justifyItems="center">
-      <Menu />
-      {/* <Text fontSize='28px' mt='1rem' p='1rem'>Contato:</Text> */}
-      <Flex w="100%" h="100%" alignItems="center" justifyContent="space-around">
-        <Flex
-          w="200px"
-          h="30%"
-          bg="#1f9bee"
-          alignItems="center"
-          justify="center"
-          borderRadius="10%"
-        >
-          <Link href="https://github.com/wiinnye" className={styles.menuLink}>
-            Github
-          </Link>
-        </Flex>
-        <Flex
-          w="200px"
-          h="30%"
-          bg="#1f9bee"
-          alignItems="center"
-          justify="center"
-          borderRadius="10%"
-        >
-          <Link
-            href="https://www.linkedin.com/in/winnye-dandhara-souza/"
-            className={styles.menuLink}
-          >
-            Linkedin
-          </Link>
-        </Flex>
-        <Flex
-          w="200px"
-          h="30%"
-          bg="#1f9bee"
-          alignItems="center"
-          justify="center"
-          borderRadius="10%"
-        >
-          <Link
-            href="https://gmail.com/wiinnye@gmail.com"
-            className={styles.menuLink}
-          >
-            E-mail
-          </Link>
-        </Flex>
-      </Flex>
+    <Flex 
+      h='100vh'
+      flexDirection="column" 
+      alignItems="center" 
+      bg="#fff" 
+    >
+      <Menu/>
+      <VStack spacing={4} mb={10} textAlign="center" mt='4rem'>
+        <Heading as="h1" size={{ base: "xl", md: "2xl" }} color="#ff7b00">
+          Vamos Conversar!
+        </Heading>
+        <Text fontSize={{ base: "lg", md: "xl" }} color="gray.500" maxW="600px">
+          Estou sempre aberta a novas oportunidades e projetos.
+        </Text>
+          <Text fontSize={{ base: "lg", md: "xl" }} color="gray.500" maxW="600px">
+          Entre em contato através dos links abaixo:
+        </Text>
+      </VStack>
+
+      <VStack 
+        spacing={6} 
+        w={{ base: "full", md: "60%" }}
+        maxW="400px"
+      >
+        <ContatoLink
+          href="https://www.linkedin.com/in/winnye-dandhara-souza/"
+          icon={FaLinkedinIn}
+          label="Meu LinkedIn"
+        />
+
+        <ContatoLink
+          href="https://github.com/wiinnye"
+          icon={FaGithub}
+          label="Meu GitHub"
+        />
+
+        <ContatoLink
+          href="mailto:wiinnye@gmail.com"
+          icon={FaEnvelope}
+          label="Enviar E-mail"
+        />
+      </VStack>
     </Flex>
   );
 }
