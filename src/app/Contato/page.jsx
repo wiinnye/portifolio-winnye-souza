@@ -12,7 +12,7 @@ export default function Contato() {
       bg="#fff" 
     >
       <Menu/>
-      <VStack spacing={4} mb={10} textAlign="center" mt='4rem'>
+      <VStack spacing={4} mb={10} textAlign="center" mt='5rem'>
         <Heading as="h1" size={{ base: "xl", md: "2xl" }} color="#ff7b00">
           Vamos Conversar!
         </Heading>
@@ -28,6 +28,7 @@ export default function Contato() {
         spacing={6} 
         w={{ base: "full", md: "60%" }}
         maxW="400px"
+        mt='5rem'
       >
         <ContatoLink
           href="https://www.linkedin.com/in/winnye-dandhara-souza/"

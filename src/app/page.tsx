@@ -3,12 +3,13 @@ import Menu from "../components/Menu/Menu";
 
 export default function Home() {
   return (
-    <Flex w="100%" bg="#0B3142" flexDirection="column">
+    <Flex w="100%" flexDirection="column">
       <Flex width="100%" height="20%">
         <Menu />
       </Flex>
       <Flex
         w="100%"
+        h='100%'
         justifyContent="space-between"
         flexDirection="column"
         mt="1rem"
@@ -22,19 +23,18 @@ export default function Home() {
             objectFit="contain"
           />
         </Box>
-
-        <Flex w="100%" flexDirection="column" alignItems="center" px=".8rem">
-          <Text fontSize="40px" fontWeight="bold" color="#fff">
-            Winnye Dandhara Souza
-          </Text>
-          <Text fontSize="25px" fontWeight="bold" color="#fff" mt="1rem">
-            Desenvolvedora Frontend
-          </Text>
-          <Text mt="1rem" alignSelf="center" color="#fff">
-            Programadora com conhecimento em JavaScript, React.js, HTML e CSS,
-            aprimorando os conhecimentos em Next.js e Typescript.
-          </Text>
-        </Flex>
+      </Flex>
+      <Flex w="100%" h='100%' flexDirection="column" alignItems="center" mt='4rem'>
+        <Text fontSize="40px" fontWeight="bold" color="#000">
+          Winnye Dandhara Souza
+        </Text>
+        <Text fontSize="25px" fontWeight="bold" color="#000" mt="1rem">
+          Desenvolvedora Frontend
+        </Text>
+        <Text mt="1rem" alignSelf="center" color="#000">
+          Programadora com conhecimento em JavaScript, React.js, HTML e CSS,
+          aprimorando os conhecimentos em Next.js e Typescript.
+        </Text>
       </Flex>
     </Flex>
   );

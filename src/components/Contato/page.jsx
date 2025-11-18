@@ -9,6 +9,7 @@ const ContatoLink = ({ href, icon, label }) => {
       p={8}
       mt='.8rem'
       variant="solid"
+      fontSize='20px'
       bg="#ff7b00"
       borderRadius="xl"
       boxShadow="xl"

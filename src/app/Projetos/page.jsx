@@ -6,15 +6,22 @@ export default function Projetos() {
   return (
     <Flex h="100vh" flexDirection="column" alignItems="center" bg="#fff">
       <Menu />
-      <VStack spacing={10} p={8} maxW="1200px" mx="auto">
+      <Flex 
+      direction='column' 
+      align='center' 
+      justify='center'
+      p={8}
+      maxW="1200px"
+      h='100%'
+      mx="auto"
+      >
         <Heading as="h1" size="2xl" color="#ff7b00">
           Meus Projetos
         </Heading>
-
-        <Box w="full" mt="3rem">
+        <Box w="full" h='100%' mt="15%">
           <ProjetosCarrossel />
         </Box>
-      </VStack>
+      </Flex>
     </Flex>
   );
 }
