@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Text, VStack } from "@chakra-ui/react";
+import { Box, Flex, Heading } from "@chakra-ui/react";
 import Menu from "../../components/Menu/Menu";
 import ProjetosCarrossel from "./ProjetoCarrossel";
 

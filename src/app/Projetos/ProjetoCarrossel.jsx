@@ -97,9 +97,9 @@ export default function ProjetosCarrossel() {
               />
             </Center>
             <Box>
-              <Heading as="h3" size="md" mb={2} color="#000">
+              <Text size="md" mb={2} color="#000">
                 {projeto.titulo}
-              </Heading>
+              </Text>
               <Text fontSize="sm" color="gray.500">
                 {projeto.descricao}
               </Text>
