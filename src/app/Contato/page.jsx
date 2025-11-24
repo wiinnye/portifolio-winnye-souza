@@ -1,3 +1,4 @@
+"use client";
 import { Flex, Heading, Text, VStack } from "@chakra-ui/react";
 import ContatoLink from "../../components/Contato/page"; 
 import Menu from "../../components/Menu/Menu";
