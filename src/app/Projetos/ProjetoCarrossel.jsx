@@ -25,15 +25,23 @@ const PROJETOS = [
 
   {
     id: 2,
-    titulo: "Codificador",
-    imagem: "/images/codificador.png",
+    titulo: "Funt Libras",
+    imagem: "/images/tcc.png",
     descricao:
-      "Site de codificador criptografador, utilizando React.js",
-    link: "https://codificador-olive.vercel.app/",
+      "Projeto desenvolvido no final do semestre do curso de ADS, apresentação de TCC, criamos um site para auxiliar interpreter na linguagens de sinias na area técnica de desenvolvimento de sistema.",
+    link: "https://tcc2025.vercel.app/",
   },
 
   {
     id: 3,
+    titulo: "Codificador",
+    imagem: "/images/codificador.png",
+    descricao: "Site de codificador criptografador, utilizando React.js",
+    link: "https://codificador-olive.vercel.app/",
+  },
+
+  {
+    id: 4,
     titulo: "Blog Pessoal Dinâmico",
     imagem: "/images/cardgame.png",
     descricao:
@@ -74,18 +82,18 @@ export default function ProjetosCarrossel() {
       >
         {PROJETOS.map((projeto) => (
           <Flex
-           direction='column'
+            direction="column"
             key={projeto.id}
             flex="0 0 auto"
             w="400px"
-            h='400px'
+            h="400px"
             mr={4}
             p={5}
             borderWidth="1px"
             borderRadius="lg"
             boxShadow="lg"
             scrollSnapAlign="start"
-            justify='space-between'
+            justify="space-between"
           >
             <Center h="200px" mb={4} overflow="hidden" borderRadius="md">
               <Image
@@ -105,12 +113,9 @@ export default function ProjetosCarrossel() {
               </Text>
             </Box>
 
-            <Box  mt='1rem' alignSelf='flex-end' justifySelf='flex-end'>
-              <Link
-                color='#000'
-                href='https://loversclub.vercel.app'
-              >
-                <Text color='#423b3bff'>ver mais</Text>
+            <Box mt="1rem" alignSelf="flex-end" justifySelf="flex-end">
+              <Link color="#000" href={projeto.link}>
+                <Text color="#423b3bff">ver projeto</Text>
               </Link>
             </Box>
           </Flex>

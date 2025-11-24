@@ -7,6 +7,15 @@ export default function Home() {
       <Flex width="100%" height="20%">
         <Menu />
       </Flex>
+
+       <Flex w="100%" h='100%' flexDirection="column" alignItems="center" mt='4rem' p='3rem'>
+        <Text fontSize="40px" fontWeight="bold" color="#ff7b00">
+          Winnye Dandhara Souza
+        </Text>
+        <Text fontSize="25px" fontWeight="bold" color="#000" mt="1rem">
+          Desenvolvedora Frontend
+        </Text>
+      </Flex>
       <Flex
         w="100%"
         h='100%'
@@ -24,18 +33,7 @@ export default function Home() {
           />
         </Box>
       </Flex>
-      <Flex w="100%" h='100%' flexDirection="column" alignItems="center" mt='4rem'>
-        <Text fontSize="40px" fontWeight="bold" color="#000">
-          Winnye Dandhara Souza
-        </Text>
-        <Text fontSize="25px" fontWeight="bold" color="#000" mt="1rem">
-          Desenvolvedora Frontend
-        </Text>
-        <Text mt="1rem" alignSelf="center" color="#000">
-          Programadora com conhecimento em JavaScript, React.js, HTML e CSS,
-          aprimorando os conhecimentos em Next.js e Typescript.
-        </Text>
-      </Flex>
+     
     </Flex>
   );
 }
