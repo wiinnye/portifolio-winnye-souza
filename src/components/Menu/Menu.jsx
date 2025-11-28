@@ -1,7 +1,6 @@
-import { Flex, Icon, Text } from "@chakra-ui/react";
-import { CiPhone } from "react-icons/ci";
-import { PiProjectorScreenChartLight } from "react-icons/pi";
-import { BsPersonArmsUp } from "react-icons/bs";
+"use client";
+
+import { Flex, Box } from "@chakra-ui/react";
 import Link from "next/link";
 import styles from "./Menu.module.css";
 
@@ -11,32 +10,31 @@ export default function Menu() {
       w="100%"
       justifyContent="space-between"
       alignItems="center"
-      bg="#0B3142"
+      bg="#fff"
+      position="fixed"
+      top="0"
+      left="0"
+      zIndex="10"
       p="1rem"
+      boxShadow="md"
     >
-      <Link href='/' className={styles.menuLink}>
-        Início
-      </Link>
-      <Flex w="auto" justifyContent="space-between">
+      <Flex w='100%' justify='space-between' pl={{lg:"5rem"}} pr={{lg:"5rem"}}>
+        <Link href="/" className={styles.menuLink}>
+          Início
+        </Link>
         <Link href="/QuemSou" className={styles.menuLink}>
-          <Icon size="lg" color="#ff7b00" mr="0.5rem">
-            <BsPersonArmsUp />
-          </Icon>
           Quem Sou
         </Link>
-        <Link href="/Projetos" className={styles.menuLink} >
-          <Icon size="lg" color="#ff7b00" mr="0.5rem">
-            <PiProjectorScreenChartLight />
-          </Icon>
+
+        <Link href="/Projetos" className={styles.menuLink}>
           Projetos
         </Link>
-         <Link href="/Contato" className={styles.menuLink} >
-          <Icon size="lg" color="#ff7b00" mr="0.5rem">
-            <CiPhone />
-          </Icon>
+
+        <Link href="/Contato" className={styles.menuLink}>
           Contato
         </Link>
       </Flex>
+      <Box h="4rem" />
     </Flex>
   );
 }

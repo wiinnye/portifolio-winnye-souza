@@ -1,54 +1,64 @@
 "use client";
 import { Flex, Heading, Text, VStack } from "@chakra-ui/react";
-import ContatoLink from "../../components/Contato/page"; 
+import ContatoLink from "../../components/Contato/page";
 import Menu from "../../components/Menu/Menu";
 import { FaGithub, FaLinkedinIn, FaEnvelope } from "react-icons/fa";
 
 export default function Contato() {
   return (
-    <Flex 
-      h='100vh'
-      flexDirection="column" 
-      alignItems="center" 
-      bg="#fff" 
+    <Flex
+      w="100%"
+      h="100vh"
+      flexDirection="column"
+      align="center"
+      justify="center"
+      bg="#fff"
     >
-      <Menu/>
-      <VStack spacing={4} mb={10} textAlign="center" mt='5rem'>
-        <Heading as="h1" size={{ base: "xl", md: "2xl" }} color="#ff7b00">
+      <Menu />
+      <VStack spacing={4} mb={8} textAlign="center" mt="5rem">
+        <Heading as="h1" size={{ base: "2xl", md: "4xl" }} color="#40c0cb">
           Vamos Conversar!
         </Heading>
         <Text fontSize={{ base: "lg", md: "xl" }} color="gray.500" maxW="600px">
           Estou sempre aberta a novas oportunidades e projetos.
         </Text>
-          <Text fontSize={{ base: "lg", md: "xl" }} color="gray.500" maxW="600px">
+        <Text fontSize={{ base: "lg", md: "xl" }} color="gray.500" maxW="600px">
           Entre em contato através dos links abaixo:
         </Text>
       </VStack>
 
-      <VStack 
-        spacing={6} 
-        w={{ base: "full", md: "60%" }}
-        maxW="400px"
-        mt='5rem'
+      <Flex 
+      w="100%"
+      h='50%'
+      justifyContent='space-around'
+      align='center'
+      flexDirection={{base:'column', md: 'row'}}
+      
       >
-        <ContatoLink
-          href="https://www.linkedin.com/in/winnye-dandhara-souza/"
-          icon={FaLinkedinIn}
-          label="Meu LinkedIn"
-        />
+        <Flex align="center" justifyItems="center">
+          <ContatoLink
+            href="https://www.linkedin.com/in/winnye-dandhara-souza/"
+            icon={FaLinkedinIn}
+            label="Meu LinkedIn"
+          />
+        </Flex>
 
-        <ContatoLink
-          href="https://github.com/wiinnye"
-          icon={FaGithub}
-          label="Meu GitHub"
-        />
+        <Flex align="center" justifyItems="center" >
+          <ContatoLink
+            href="https://github.com/wiinnye"
+            icon={FaGithub}
+            label="Meu GitHub"
+          />
+        </Flex>
 
-        <ContatoLink
-          href="mailto:wiinnye@gmail.com"
-          icon={FaEnvelope}
-          label="Enviar E-mail"
-        />
-      </VStack>
+        <Flex align="center" justifyItems="center">
+          <ContatoLink
+            href="mailto:wiinnye@gmail.com"
+            icon={FaEnvelope}
+            label="Enviar E-mail"
+          />
+        </Flex>
+      </Flex>
     </Flex>
   );
 }

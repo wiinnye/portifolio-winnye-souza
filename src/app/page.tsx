@@ -1,39 +1,49 @@
-import { Flex, Image, Text, Box } from "@chakra-ui/react";
+"use client";
+import { Flex, Text, Container, VStack } from "@chakra-ui/react";
 import Menu from "../components/Menu/Menu";
 
 export default function Home() {
   return (
-    <Flex w="100%" flexDirection="column">
-      <Flex width="100%" height="20%">
-        <Menu />
-      </Flex>
+    <Flex w="100%" minH="100vh" flexDirection="column">
+      <Menu />
 
-       <Flex w="100%" h='100%' flexDirection="column" alignItems="center" mt='4rem' p='3rem'>
-        <Text fontSize="40px" fontWeight="bold" color="#ff7b00">
-          Winnye Dandhara Souza
-        </Text>
-        <Text fontSize="25px" fontWeight="bold" color="#000" mt="1rem">
-          Desenvolvedora Frontend
-        </Text>
-      </Flex>
-      <Flex
-        w="100%"
-        h='100%'
-        justifyContent="space-between"
-        flexDirection="column"
-        mt="1rem"
+      <Container
+        maxW="container.lg"
+        minH='500px'
+        py={10}
+        mt={{ base: "21%", md: "10%" }}
+        bg="#40c0cb"
       >
-        <Box mt={8} mb={4} mx="auto" maxW="800px">
-          <Image
-            src="/images/banner.png"
-            alt="Foto de perfil profissional"
-            width={800}
-            height={400}
-            objectFit="contain"
-          />
-        </Box>
-      </Flex>
-     
+        <VStack align="stretch">
+          <Flex
+            wrap="wrap"
+            w="100%"
+            h="100%"
+            flexDirection="column"
+            align="center"
+            justify="center"
+            mt={{ base: "150px", md: "7%" }}
+            p={{ md: "3rem" }}
+          >
+            <Text
+              fontSize={{ base: "30px", md: "60px" }}
+              fontWeight="bold"
+              color="#fff"
+              pl="1rem"
+            >
+              Winnye Dandhara Souza
+            </Text>
+            <Text
+              fontSize={{ base: "20px", md: "30px" }}
+              fontWeight="bold"
+              color="#000"
+              mt="1rem"
+            >
+              Desenvolvedora Frontend
+            </Text>
+          </Flex>
+        </VStack>
+      </Container>
     </Flex>
   );
 }

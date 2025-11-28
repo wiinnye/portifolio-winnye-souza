@@ -28,7 +28,7 @@ const PROJETOS = [
     titulo: "Funt Libras",
     imagem: "/images/tcc.png",
     descricao:
-      "Projeto desenvolvido no final do semestre do curso de ADS, apresentação de TCC, criamos um site para auxiliar interpreter na linguagens de sinias na area técnica de desenvolvimento de sistema.",
+      "Projeto desenvolvido no final do semestre do curso de ADS, apresentação de TCC, criamos um site para auxiliar interpreter na linguagens de sinias na area técnica de desenvolvimento de sistema." ,
     link: "https://tcc2025.vercel.app/",
   },
 
@@ -85,8 +85,8 @@ export default function ProjetosCarrossel() {
             direction="column"
             key={projeto.id}
             flex="0 0 auto"
-            w="400px"
-            h="400px"
+            w={{base:"300px",md:"600px"}}
+            h={{base:"500px",md:"600px"}}
             mr={4}
             p={5}
             borderWidth="1px"
@@ -95,7 +95,7 @@ export default function ProjetosCarrossel() {
             scrollSnapAlign="start"
             justify="space-between"
           >
-            <Center h="200px" mb={4} overflow="hidden" borderRadius="md">
+            <Center h="340px" mb={4} overflow="hidden" borderRadius="md">
               <Image
                 src={projeto.imagem}
                 alt={`Imagem do projeto ${projeto.titulo}`}
@@ -105,15 +105,30 @@ export default function ProjetosCarrossel() {
               />
             </Center>
             <Box>
-              <Text size="md" mb={2} color="#000">
+              <Text fontSize="2xl" mb={2} color="#000">
                 {projeto.titulo}
               </Text>
-              <Text fontSize="sm" color="gray.500">
+              <Text
+                fontSize="xl"
+                color="gray.500"
+                maxH="100px"
+                minH="85px"
+                overflowY="auto"
+              >
                 {projeto.descricao}
               </Text>
             </Box>
 
-            <Box mt="1rem" alignSelf="flex-end" justifySelf="flex-end">
+            <Box
+              mt="1rem"
+              alignSelf="flex-start"
+              justifySelf="flex-end"
+              borderRadius="md"
+              p=".5rem"
+              boxShadow="xl"
+              transition="all 0.3s ease-in-out"
+              _hover={{ transform: "translateY(-5px)", boxShadow: "2xl" }}
+            >
               <Link color="#000" href={projeto.link}>
                 <Text color="#423b3bff">ver projeto</Text>
               </Link>
@@ -128,13 +143,13 @@ export default function ProjetosCarrossel() {
         left={{ base: "0", md: "-60px" }}
         top="50%"
         transform="translateY(-50%)"
-        bg="#0B3142"
+        bg="#40c0cb"
         boxShadow="lg"
         zIndex={10}
         onClick={() => handleScroll("left")}
         isDisabled={currentIndex === 0}
       >
-        <Icon size="lg" color="#ff7b00" mr="0.5rem">
+        <Icon size="lg" color="#fff" mr="0.5rem">
           <FaChevronLeft />
         </Icon>
       </Button>
@@ -145,13 +160,13 @@ export default function ProjetosCarrossel() {
         right={{ base: "0", md: "-60px" }}
         top="50%"
         transform="translateY(-50%)"
-        bg="#0B3142"
+        bg="#40c0cb"
         boxShadow="lg"
         zIndex={10}
         onClick={() => handleScroll("right")}
         isDisabled={currentIndex === PROJETOS.length - 1}
       >
-        <Icon size="lg" color="#ff7b00" mr="0.5rem">
+        <Icon size="lg" color="#fff" mr="0.5rem">
           <FaChevronRight />
         </Icon>
       </Button>
